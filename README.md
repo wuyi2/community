@@ -8,6 +8,25 @@
 - [Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
 - [GitHub第三方登录新方法](https://niter.cn/p/115)
 - [okhttp异常java.lang.IllegalStateException: closed](https://blog.csdn.net/zhanghegang/article/details/78173034)
+- [thymeleaf 条件判断语句if else](https://blog.csdn.net/leftfist/article/details/105611752)
+- [Spring-boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 ## 工具
 - git 
 - [Visual Paradigm](https://www.visual-paradigm.com)
+- [H2数据库](http://www.h2database.com/html/main.html)
+
+## 脚本
+```sql
+create table USER
+(
+	ID INT auto_increment,
+	ACCOUNT_ID VARCHAR(100),
+	NAME VARCHAR(50),
+	TOKEN VARCHAR(36),
+	GMT_CREATE BIGINT,
+	GMT_MODIFIED BIGINT,
+	constraint USER_PK
+		primary key (ID)
+);
+
+```
