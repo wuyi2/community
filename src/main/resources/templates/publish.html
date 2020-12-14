@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>发布帖子</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/community.css">
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">JAVA WEB BBS</span>
+            </button>
+            <a class="navbar-brand" href="#">JAVA WEB BBS</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" th:if="${session.githubUser != null}">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false" th:text="${session.githubUser.getName()}"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">我的消息</a></li>
+                        <li><a href="#">个人资料</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+                <li th:unless="${session.githubUser != null}">
+                    <a href="https://github.com/login/oauth/authorize?client_id=b2bdb77b12d28d02cd9d&redirect_uri=http://localhost:8887/callback&scope=user&state=1">登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>发布</h2>
+            <hr>
+            <form action="">
+                <div class="form-group">
+                    <label for="title">标题（必填）：</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="标题……">
+                </div>
+                <div class="form-group">
+                    <label for="title">内容（必填）：</label>
+                    <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="title">添加标签：</label>
+                    <textarea type="text" class="form-control" name="tag" id="tag" placeholder="输入标签，使用逗号（,）分割"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">发布</button>
+                <hr>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>免责声明</h3>
+            <p>为方便使用者查阅由其他人士提供的资讯，
+                本网站可能会提供或协助提供超链接至外界网站。
+                对任何因使用或不当使用或依据通过本网站传递或提供的外界网站的内容而引致或
+                所涉及的损失、毁坏或损害，本网站概不承担任何义务、责任或法律责任。</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

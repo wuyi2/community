@@ -14,7 +14,7 @@
 - git 
 - [Visual Paradigm](https://www.visual-paradigm.com)
 - [H2数据库](http://www.h2database.com/html/main.html)
-
+- [Flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
 ## 脚本
 ```sql
 create table USER
@@ -28,5 +28,8 @@ create table USER
 	constraint USER_PK
 		primary key (ID)
 );
+```
 
+```bash
+mvn flyway:migrate
 ```
