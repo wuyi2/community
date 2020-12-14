@@ -58,6 +58,7 @@ public class AuthorizeController {
             user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
             response.addCookie(new Cookie("token", token));
+            // 获得session，用于显示登录后的个人信息
             request.getSession().setAttribute("githubUser", githubUser);
         } else {
             // 登录失败，重新登录
