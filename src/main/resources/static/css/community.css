@@ -5,3 +5,14 @@ body {
     background-color: white;
     margin: 30px;
 }
+
+.favicon {
+    width: 58px;
+    height: 58px;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}

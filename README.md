@@ -10,11 +10,14 @@
 - [okhttp异常java.lang.IllegalStateException: closed](https://blog.csdn.net/zhanghegang/article/details/78173034)
 - [thymeleaf 条件判断语句if else](https://blog.csdn.net/leftfist/article/details/105611752)
 - [Spring-boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+- [Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
 ## 工具
 - git 
 - [Visual Paradigm](https://www.visual-paradigm.com)
 - [H2数据库](http://www.h2database.com/html/main.html)
 - [Flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
+- [Project Lombok](https://projectlombok.org/)
+
 ## 脚本
 ```sql
 create table USER
