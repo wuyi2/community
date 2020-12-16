@@ -6,6 +6,11 @@ body {
     margin: 30px;
 }
 
+.btn_publish {
+    float: right;
+    margin-bottom: 15px;
+}
+
 .favicon {
     width: 58px;
     height: 58px;

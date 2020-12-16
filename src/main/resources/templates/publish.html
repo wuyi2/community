@@ -71,10 +71,14 @@
 
                 <div class="container-fluid main">
                     <div class="row">
-                        <div class="alert alert-danger col-lg-4 col-md-12 col-sm-12 col-xs-12"
-                             th:if="${error != null}" th:text="${error}"></div>
-                        <div class="col-lg-1 col-lg-offset-7 col-md-1 col-md-offset-11 col-sm-1 col-sm-offset-11 col-xs-1 col-xs-offset-11">
-                            <button type="submit" class="btn btn-success" th:align="right">
+                        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                            <div class="alert alert-danger col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                 th:if="${error != null}"
+                                 th:text="${error}">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn btn-success btn_publish">
                                 发布
                             </button>
                         </div>
