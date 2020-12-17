@@ -17,6 +17,7 @@
 - [H2数据库](http://www.h2database.com/html/main.html)
 - [Flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
 - [Project Lombok](https://projectlombok.org/)
+- [Postman 谷歌插件](https://chrome.google.com/webstore/detail/tabbed-postman-rest-clien/coohjcphdfgbiolnekdpbcijmhambjff?hl=zh-CN)
 
 ## 脚本
 ```sql
