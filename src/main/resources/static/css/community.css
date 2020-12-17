@@ -1,5 +1,6 @@
 body {
-    background-color: #efefef;
+    /*background-color: #efefef;*/
+    background-image: url("https://elasticsearch.cn/static/css/default/img/bg.jpg");
 }
 .main {
     background-color: white;
@@ -12,12 +13,12 @@ body {
 }
 
 .favicon {
-    width: 58px;
-    height: 58px;
+    width: 44px;
+    height: 44px;
 }
 
 .text-desc {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     color: #999;
 }

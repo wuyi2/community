@@ -2,6 +2,7 @@ package com.wang.community.service;
 
 import com.wang.community.dto.PaginationDTO;
 import com.wang.community.dto.QuestionDTO;
+import com.wang.community.mapper.QuestionExtMapper;
 import com.wang.community.mapper.QuestionMapper;
 import com.wang.community.mapper.UserMapper;
 import com.wang.community.model.Question;
@@ -20,6 +21,9 @@ public class QuestionService {
 
     @Autowired
     private QuestionMapper questionMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     @Autowired
     private UserMapper userMapper;
@@ -132,5 +136,12 @@ public class QuestionService {
                     .andIdEqualTo(question.getId());
             questionMapper.updateByExampleSelective(updateQuestion, example);
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
