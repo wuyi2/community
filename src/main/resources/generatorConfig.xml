@@ -7,6 +7,7 @@
 <!--    <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
 <!--        <jdbcConnection driverClass="COM.ibm.db2.jdbc.app.DB2Driver"-->
 <!--                        connectionURL="jdbc:db2:TEST"-->
 <!--                        userId="db2admin"-->
@@ -42,7 +43,7 @@
 <!--            <ignoreColumn column="FRED" />-->
 <!--            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />-->
         </table>
-<!--        <table tableName="question" domainObjectName="Question"></table>-->
+        <table tableName="question" domainObjectName="Question"></table>
 
     </context>
 </generatorConfiguration>
