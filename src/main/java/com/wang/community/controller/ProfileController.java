@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class ProfileController {
 
-
     @Autowired
     private QuestionService questionService;
 
@@ -32,15 +31,15 @@ public class ProfileController {
         }
 
         if ("questions".equals(action)) {
-            model.addAttribute("section", "question");
+            model.addAttribute("section", "questions");
             model.addAttribute("sectionName", "我的问题");
         } else if ("replies".equals(action)) {
             model.addAttribute("section", "replies");
             model.addAttribute("sectionName", "最新回复");
         }
 
-        PaginationDTO paginationDTO = questionService.list(user.getId(),page,size);
-        model.addAttribute("pagination",paginationDTO);
+        PaginationDTO paginationDTO = questionService.list(user.getId(), page, size);
+        model.addAttribute("pagination", paginationDTO);
 
         return "profile";
     }

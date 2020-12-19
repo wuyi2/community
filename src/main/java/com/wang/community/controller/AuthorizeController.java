@@ -2,7 +2,6 @@ package com.wang.community.controller;
 
 import com.wang.community.dto.AccessTokenDTO;
 import com.wang.community.dto.GithubUser;
-import com.wang.community.mapper.UserMapper;
 import com.wang.community.model.User;
 import com.wang.community.provider.GithubProvider;
 import com.wang.community.service.UserService;
@@ -38,7 +37,6 @@ public class AuthorizeController {
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
                            @RequestParam(name = "state") String state,
-                           HttpServletRequest request,
                            HttpServletResponse response) {
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(clientId);
@@ -49,7 +47,7 @@ public class AuthorizeController {
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
 
-        if(githubUser != null && githubUser.getId() != null) {
+        if (githubUser != null && githubUser.getId() != null) {
             User user = new User();
             String token = UUID.randomUUID().toString();
             user.setToken(token);
@@ -57,7 +55,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
 //            user.setGmtCreate(System.currentTimeMillis());
 //            user.setGmtModified(user.getGmtCreate());
-            user.setAvatarUrl(githubUser.getAvatar_url());
+            user.setAvatarUrl(githubUser.getAvatarUrl());
             userService.createOrUpdate(user);
             response.addCookie(new Cookie("token", token));
 //            // 获得session，用于显示登录后的个人信息
