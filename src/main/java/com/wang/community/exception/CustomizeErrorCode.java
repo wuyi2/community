@@ -2,12 +2,13 @@ package com.wang.community.exception;
 
 public enum CustomizeErrorCode implements ICustomizeErrorCode {
 
-    QUESTION_NOT_FOUND(2001, "你找到问题不在了，要不要换个试试？"),
-    TARGET_PARAM_NOT_FOUND(2002, "未选中任何问题或评论进行回复"),
-    NO_LOGIN(2003, "当前操作需要登录，请登陆后重试"),
-    SYS_ERROR(2004, "服务冒烟了，要不然你稍后再试试！！！"),
-    TYPE_PARAM_WRONG(2005, "评论类型错误或不存在"),
-    COMMENT_NOT_FOUND(2006, "回复的评论不存在了，要不要换个试试？"),;
+    QUESTION_NOT_FOUND(2001, "这个问题不见了，去找找别的吧"),
+    TARGET_PARAM_NOT_FOUND(2002, "先选择问题才能回复哟"),
+    NO_LOGIN(2003, "请先登录再进行此操作"),
+    SYS_ERROR(2004, "服务器故障，请稍后再试"),
+    TYPE_PARAM_WRONG(2005, "操作错误，评论不存在"),
+    COMMENT_NOT_FOUND(2006, "评论不存在，换一个试试"),
+    ;
 
     @Override
     public String getMessage() {
