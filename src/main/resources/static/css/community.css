@@ -12,6 +12,10 @@ body {
     margin-bottom: 15px;
 }
 
+.media-body {
+    padding-top: 13px;
+}
+
 .favicon {
     width: 44px;
     height: 44px;
@@ -34,4 +38,34 @@ body {
 
 .error-page {
     margin: auto;
+}
+
+.comment {
+    margin: 10px 0px;
+}
+
+.btn-comment {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.comments {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #EEE;
+}
+
+.menu {
+    margin-top: 5px;
+    color: #999;
+}
+
+.menu .icon {
+    margin-right: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu .icon:hover {
+    color: #499ef3;
 }
