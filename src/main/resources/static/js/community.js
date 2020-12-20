@@ -1,5 +1,7 @@
-// 这里的$ var 出现下划线没关系，通过测试可以知道，已经起到了作用，如果有问题，重启IDEA，手动部署项目就好了。
-function post() {
+/**
+ * 提交回复
+ */
+function post() { // 这里的$ var 出现下划线没关系，通过测试可以知道，已经起到了作用，如果有问题，重启IDEA，手动部署项目就好了。
     var questionId = $("#question_id").val();
     // console.log(questionId); // 测试是否能收到id
     var content = $("#comment_content").val();
@@ -36,4 +38,24 @@ function post() {
         },
         dataType: "json"
     });
+}
+
+/**
+ * 打开子评论
+ */
+function collapseComments(e) {
+    var id = e.getAttribute("data-id");
+    var comments = $("#comment-"+id);
+
+    // var collapse = e.getAttribute("data-collapse");
+    // if (collapse) {
+    //     comments.removeClass("in");
+    //     e.removeAttribute("data-collapse");
+    // } else {
+    //     comments.addClass("in");
+    //     // console.log(id);
+    //     e.setAttribute("data-collapse", "in");
+    // }
+    comments.toggleClass("in");
+
 }

@@ -24,7 +24,7 @@ body {
 .text-desc {
     font-size: 14px;
     font-weight: normal;
-    color: #999;
+    color: #999999;
 }
 
 .profile .section {
@@ -33,7 +33,7 @@ body {
 
 .community-menu {
     font-size: 14px;
-    color: #999;
+    color: #999999;
 }
 
 .error-page {
@@ -52,7 +52,20 @@ body {
 .comments {
     padding-bottom: 5px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.sub-comments {
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #EEEEEE;
+    padding-top: 15px;
+}
+
+.sub-comments .btn {
+    margin: 10px 0px;
+    float: right;
 }
 
 .menu {
