@@ -118,12 +118,12 @@
                                 <a href="#">
                                     <img class="media-object img-rounded favicon"
                                          src="https://images.nowcoder.com/images/20200317/915408686_1584409549696_A1D89FBC7206B26451C01D67BE1E9AB1">
-                                        <!--th:src="${question.user.avatarUrl}"-->
+                                        <!--th:src="${session.user != null ? session.user.avatarUrl : 'images/default-avatar.png'}"-->
                                 </a>
                             </div>
                             <div class="media-body">
                                 <h5 class="media-heading">
-                                    <span th:text="${question.user.name}"></span>
+                                    <span th:text="${session.user != null ? session.user.name : 'OOOO'}"></span>
                                 </h5>
                             </div>
                         </div>
