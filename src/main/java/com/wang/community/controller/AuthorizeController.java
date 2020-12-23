@@ -5,6 +5,7 @@ import com.wang.community.dto.GithubUser;
 import com.wang.community.model.User;
 import com.wang.community.provider.GithubProvider;
 import com.wang.community.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Controller
+@Slf4j
 public class AuthorizeController {
 
     @Autowired
@@ -61,6 +63,7 @@ public class AuthorizeController {
 //            // 获得session，用于显示登录后的个人信息
 //            request.getSession().setAttribute("githubUser", githubUser);
         } else {
+            log.error("callback get github error,{}", githubUser);
             // 登录失败，重新登录
         }
         return "redirect:/";
