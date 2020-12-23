@@ -103,3 +103,8 @@ body {
 .question-related {
     line-height: 20px;
 }
+
+.footer {
+    color: #666666;
+    text-align: center;
+}
