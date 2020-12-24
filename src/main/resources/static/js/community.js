@@ -78,7 +78,8 @@ function collapseComments(e) {
                         "class": "media-left"
                     }).append($("<img/>", {
                         "class": "media-object img-rounded favicon",
-                        "src": comment.user.avatarUrl
+                        "src": comment.user.avatarUrl,
+                        "onerror": "this.src= '/images/default-avatar.png'; this.onerror = null;"
                     }));
 
                     var mediaBodyElement = $("<div/>", {
