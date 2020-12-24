@@ -22,8 +22,8 @@
                 <div class="media" th:each="question : ${pagination.data}">
                     <div class="media-left">
                         <a th:href="@{'/question/'+ ${question.id}}">
-                            <img class="media-object img-rounded favicon"
-                                 src="https://images.nowcoder.com/images/20200317/915408686_1584409549696_A1D89FBC7206B26451C01D67BE1E9AB1">
+                            <img class="media-object img-rounded favicon" th:src="${question.user.avatarUrl}" onerror="this.src= '/images/comment.png'; this.onerror = null;">
+<!--                                 src="https://images.nowcoder.com/images/20200317/915408686_1584409549696_A1D89FBC7206B26451C01D67BE1E9AB1">-->
                             <!--img标签下替代src作为每篇文章头像：th:src="${question.user.avatarUrl}"-->
                         </a>
                     </div>

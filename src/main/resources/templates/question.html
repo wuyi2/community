@@ -116,8 +116,8 @@
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img class="media-object img-rounded favicon"
-                                         src="https://images.nowcoder.com/images/20200317/915408686_1584409549696_A1D89FBC7206B26451C01D67BE1E9AB1">
+                                    <img class="media-object img-rounded favicon" th:src="${session.user != null ? session.user.avatarUrl : '/images/default-avatar.png'}">
+<!--                                         src="/images/default-avatar.png">-->
                                         <!--th:src="${session.user != null ? session.user.avatarUrl : 'images/default-avatar.png'}"-->
                                 </a>
                             </div>
@@ -143,8 +143,8 @@
                 <div class="media">
                     <div class="media-left">
                         <a href="#">
-                            <img class="media-object img-circle favicon"
-                                 src="https://images.nowcoder.com/images/20200317/915408686_1584409549696_A1D89FBC7206B26451C01D67BE1E9AB1">
+                            <img class="media-object img-circle favicon" th:src="${question.user.avatarUrl}" onerror="this.src= '/images/question.png'; this.onerror = null;">
+<!--                                 src="https://images.nowcoder.com/images/20200317/915408686_1584409549696_A1D89FBC7206B26451C01D67BE1E9AB1">-->
                             <!--img标签下替代src作为每篇文章头像：th:src="${question.user.avatarUrl}"-->
                         </a>
                     </div>
